@@ -1,41 +1,44 @@
-@import "../../styles/colors";
-@import "../../styles/mixins";
 @import "../../styles/size";
-@import "../../styles/typography";
 
-.navbarContainer {
-  display: block;
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
   position: fixed;
-  padding: 0;
-  min-height: $navbar-height-smallScreen;
-  min-width: 100vw;
-  background-color: var(--lg-darker-white);
-  @include md {
-    position: absolute;
-    padding: 0 35px;
-    height: 100%;
-    min-height: 100vh;
-    min-width: $navbar-width-bigScreen;
-  }
+  top: 0;
+  height: $navbar-height;
 }
 
 .navbarContent {
-  opacity: 0;
-  height: 0;
-  pointer-events: none;
-  hr {
-    margin-top: 25px;
-  }
-  &[data-showmenu="true"] {
-    pointer-events: initial;
-    transition: all 0.2s cubic-bezier(0.54, 0.18, 0.22, 0.79);
-    opacity: 1;
-    height: 100%;
-    padding: 15px 25px 10px 20px;
-    z-index: 100;
-  }
-  @include md {
-    pointer-events: initial;
-    opacity: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+}
+
+.navbarTitle {
+  color: var(--nav-white);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  text-decoration: none;
+}
+
+.navbarLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.navbarItem {
+  color: var(--nav-white);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  &:hover {
+    color: var(--nav-lightest-gray);
   }
 }

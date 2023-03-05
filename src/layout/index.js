@@ -1,33 +1,15 @@
 import React from "react";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
-import Theme from "../components/theme";
-
 import "./index.scss";
 
-export const Layout = ({
-  children,
-  handlePageChange,
-  selectedCategory,
-  handleSelect,
-  currentPage,
-}) => {
+export const Layout = () => {
   return (
     <React.Fragment>
       <div className="container">
-        <Navbar
-          handlePageChange={handlePageChange}
-          handleSelect={handleSelect}
-          selectedCategory={selectedCategory}
-          currentPage={currentPage}
-        />
-        <div className="innerContainer">
-          <div className="content">
-            <Theme />
-            {children}
-          </div>
-          <Footer />
-        </div>
+        <Navbar />
+        {/* {children} */}
+        <Footer />
       </div>
     </React.Fragment>
   );
