@@ -13,7 +13,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(relativePath: { regex: "/moon.jpeg/" }) {
         childImageSharp {
-          fixed(width: 72, height: 72) {
+          fixed(width: 100, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -31,12 +31,13 @@ const Bio = () => {
 
   return (
     <div className="bioContainer">
-      <Image
-        className="bioImage"
-        fixed={bioQuery.avatar.childImageSharp.fixed}
-        alt={author}
-        fadeIn={true}
-      />
+      <div className="bioImage">
+        <Image
+          fixed={bioQuery.avatar.childImageSharp.fixed}
+          alt={author}
+          fadeIn={true}
+        />
+      </div>
       <div className="bioContent">
         <div>
           <span
@@ -45,7 +46,7 @@ const Bio = () => {
             onKeyDown={handleClick}
             role="presentation"
           >
-            @{author}
+            {author}
           </span>
         </div>
         <p className="bioText">{bio}</p>

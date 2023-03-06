@@ -1,6 +1,5 @@
-@import "../../styles/size.scss";
+@import "../../styles/size";
 
-.listContainer {
-  padding: 0;
-  min-height: $contentList-height;
+.contentListContainer {
+  border: 1px solid red;
 }

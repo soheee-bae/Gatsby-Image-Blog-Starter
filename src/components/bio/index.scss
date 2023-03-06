@@ -4,13 +4,25 @@
 .bioContainer {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 10px;
+  padding: 0 40px;
 }
 
 .bioImage {
-  border-radius: 50%;
   border: none;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  img {
+    margin: auto;
+    border-radius: 50%;
+    width: 80px !important;
+    height: 80px !important;
+  }
 }
 
 .bioContent {
@@ -18,11 +30,11 @@
   flex-direction: column;
   justify-content: center;
   padding: 3px;
-  gap: 5px;
 }
 
 .bioLink {
-  @extend .h5;
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
   width: auto;
   padding: 5px;
   color: var(--lg-darkest-gray);
@@ -36,7 +48,9 @@
 }
 
 .bioText {
-  @extend .body-1;
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  line-height: 1.5;
   margin: 0;
   padding: 5px;
   color: var(--lg-dark-gray);
