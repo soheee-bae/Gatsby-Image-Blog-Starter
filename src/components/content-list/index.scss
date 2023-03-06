@@ -1,5 +1,5 @@
-@import "../../styles/size";
-
-.contentListContainer {
-  border: 1px solid red;
+.contentListTitle {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-medium);
+  margin-top: 0;
 }

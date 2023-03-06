@@ -2,7 +2,13 @@
 title: "Quick Start"
 date: 2023-02-06 10:51:13
 subtitle: "Let's get started!"
-category: "Quick Start"
+category: "Instruction"
+tags: 
+- about
+- information
+- guidelines
+icon:"🎬"
+background: "coding.gif"
 draft: false
 ---
 
