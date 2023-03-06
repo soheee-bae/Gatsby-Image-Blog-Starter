@@ -1,36 +1,19 @@
-.theme {
-  padding: 10px 20px;
-  align-self: flex-end;
-}
-
 .themeSwitch {
-  display: block;
-  float: right;
-  border: none;
-  height: 50px;
-  width: 50px;
   border-radius: 50%;
-  background-color: var(--lg-darker-white);
+  padding: 3px 5px;
   cursor: pointer;
   transition: all 0.3s;
-  &:hover {
-    background-color: var(--lg-lightest-gray);
-  }
+  margin-left: -2px;
+  background: none;
   svg {
-    stroke-width: 2;
-    color: var(--lg-light-black);
+    margin-bottom: -1px;
   }
-  &[data-light="true"] {
-    svg {
-      height: 32px;
-      width: 32px;
-    }
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
   }
   &[data-light="false"] {
     svg {
       padding: 5px 2px 0 2px;
-      height: 28px;
-      width: 28px;
     }
   }
 }

@@ -35,14 +35,26 @@ const Theme = () => {
   }, []);
 
   return (
-    <div className="theme">
-      <button
-        className="themeSwitch"
-        data-light={checked}
-        onClick={() => handleSwitch(!checked)}
-      >
-        {checked ? <LightOn /> : <LightOff />}
-      </button>
+    <div
+      className="themeSwitch"
+      data-light={checked}
+      onClick={() => handleSwitch(!checked)}
+    >
+      {checked ? (
+        <LightOn
+          width={28}
+          height={28}
+          strokeWidth={2}
+          color="var(--default-darker-white)"
+        />
+      ) : (
+        <LightOff
+          width={23}
+          height={23}
+          strokeWidth={2.5}
+          color="var(--default-darker-white)"
+        />
+      )}
     </div>
   );
 };

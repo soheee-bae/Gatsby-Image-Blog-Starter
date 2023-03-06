@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import "./index.scss";
+import Theme from "../theme";
 
 export const Navbar = () => {
   return (
@@ -16,6 +17,7 @@ export const Navbar = () => {
           <Link className="navbarItem" to="/about">
             About
           </Link>
+          <Theme />
         </div>
       </div>
     </div>
