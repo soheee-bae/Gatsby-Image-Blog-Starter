@@ -1,0 +1,14 @@
+@import "../../styles/size";
+
+.header {
+  min-height: $header-min-height;
+  max-height: $header-max-height;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  img {
+    filter: brightness(0.5) contrast(0.9);
+    height: 100%;
+    width: 100%;
+  }
+}

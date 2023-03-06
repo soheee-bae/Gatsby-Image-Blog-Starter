@@ -26,16 +26,16 @@
   --dk-darker-white: #f8f9fa;
   --dk-white: #ffffff;
 
-  /** Navbar Colors**/
-  --nav-black: #000000;
-  --nav-light-black: #212529;
-  --nav-darkest-gray: #343a40;
-  --nav-darker-gray: #495057;
-  --nav-dark-gray: #6c757d;
-  --nav-normal-gray: #adb5bd;
-  --nav-light-gray: #ced4da;
-  --nav-lighter-gray: #dee2e6;
-  --nav-lightest-gray: #e9ecef;
-  --nav-darker-white: #f8f9fa;
-  --nav-white: #ffffff;
+  /** Default colors that wont change with theme switcher **/
+  --default-black: #000000;
+  --default-light-black: #212529;
+  --default-darkest-gray: #343a40;
+  --default-darker-gray: #495057;
+  --default-dark-gray: #6c757d;
+  --default-normal-gray: #adb5bd;
+  --default-light-gray: #ced4da;
+  --default-lighter-gray: #dee2e6;
+  --default-lightest-gray: #e9ecef;
+  --default-darker-white: #f8f9fa;
+  --default-white: #ffffff;
 }

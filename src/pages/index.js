@@ -2,13 +2,6 @@ import * as React from "react";
 import { graphql } from "gatsby";
 
 import Bio from "../components/bio";
-import Title from "../components/title";
-import ContentList from "../components/content-list";
-import { PAGE } from "../constants/page";
-
-import { usePagination } from "../hooks/usePagination";
-import { useCategory } from "../hooks/useCategory";
-import { usePosts } from "../hooks/usePosts";
 
 import { Layout } from "../layout";
 import "../styles/_typography.scss";
@@ -16,31 +9,21 @@ import "./index.scss";
 
 export default function Page({ data }) {
   const posts = data.allMarkdownRemark.edges;
-  const { handleSelect, selectedCategory } = useCategory();
-  const { filteredPosts } = usePosts({ posts, selectedCategory });
-  const { paginationRange, currentPage, handlePageChange } = usePagination({
-    totalCount: filteredPosts.length,
-    siblingCount: PAGE.SIBLINGCOUNT,
-    pageSize: PAGE.PAGESIZE,
-  });
+  const { homePageBackground } = data.site.siteMetadata;
 
   return (
     <Layout
-      handlePageChange={handlePageChange}
-      handleSelect={handleSelect}
-      selectedCategory={selectedCategory}
-      currentPage={currentPage}
+      headerImg={homePageBackground}
+      title="More About Blog"
+      subtitle="Do you want to know more about Gatsby Clean Blog Starter?"
+      category="Blog"
+      tags="about"
+      icon="🍬"
+      date="2023-02-06 9:51:13"
     >
       <div className="homeContainer">
-        <Title />
         <Bio />
-        <hr />
-        <ContentList
-          filteredPosts={filteredPosts}
-          paginationRange={paginationRange}
-          currentPage={currentPage}
-          handlePageChange={handlePageChange}
-        />
+        {/* <ContentList filteredPosts={filteredPosts} /> */}
       </div>
     </Layout>
   );
@@ -66,6 +49,11 @@ export const pageQuery = graphql`
             slug
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        homePageBackground
       }
     }
   }

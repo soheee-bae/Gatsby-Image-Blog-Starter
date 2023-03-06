@@ -1,11 +1,12 @@
 @import "../../styles/size";
 
 .navbar {
+  z-index: 100;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background: transparent;
   position: fixed;
   top: 0;
   height: $navbar-height;
@@ -16,12 +17,12 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 700px;
+  max-width: $content-max-width;
   width: 100%;
 }
 
 .navbarTitle {
-  color: var(--nav-white);
+  color: var(--default-white);
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
   text-decoration: none;
@@ -34,11 +35,11 @@
 }
 
 .navbarItem {
-  color: var(--nav-white);
+  color: var(--default-white);
   font-size: var(--text-base);
   font-weight: var(--font-medium);
   text-decoration: none;
   &:hover {
-    color: var(--nav-lightest-gray);
+    color: var(--default-lightest-gray);
   }
 }
