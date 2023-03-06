@@ -4,18 +4,40 @@
   cursor: pointer;
   padding: 8px 10px;
   border-radius: 8px;
+  margin-bottom: 20px;
+  p {
+    margin: 4px;
+  }
   &:hover {
     background-color: var(--lg-darker-white);
   }
 }
 
+.itemCategory {
+  color: var(--lg-dark-gray);
+  font-size: var(--text-sm);
+}
+
+.itemHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemIcon {
+  font-size: var(--text-3xl);
+}
+
 .itemTitle {
-  margin: 0;
   color: var(--lg-light-black);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
 }
 
 .itemSubTitle {
   color: var(--lg-light-black);
+  font-size: var(--text-xl);
+  font-weight: var(--font-medium);
 }
 
 .itemText {
@@ -29,5 +51,6 @@
 }
 
 .itemDate {
-  color: var(--lg-darker-gray);
+  color: var(--lg-dark-gray);
+  font-size: var(--text-sm);
 }

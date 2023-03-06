@@ -3,6 +3,11 @@ title: "Test 1-1"
 date: 2023-02-05 10:51:13
 subtitle: "This is test md file"
 category: "Category 1-1"
+tags:
+  - tag1
+  - tag2
+  - tag3
+background: "coding.gif"
 draft: false
 ---
 

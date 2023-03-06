@@ -1,9 +1,8 @@
 module.exports = {
   blogName: "My Blog",
 
-  title: "Gatsby Clean Starter",
   author: "Your Name",
-  bio: "This is my bio",
+  bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 
   githubUrl: "https://github.com/soheee-bae",
   blogUrl: "https://soheee-bae.github.io/soheee-bae/",

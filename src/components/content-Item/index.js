@@ -22,16 +22,17 @@ export const ContentItem = ({ post }) => {
       role="presentation"
     >
       {CATEGORY && <p className="itemCategory">{frontmatter.category}</p>}
-      <div>
-        {ICON && <p className="itemIcon">{frontmatter.icon}</p>}
+      <div className="itemHeader">
+        {ICON && (
+          <p role="img" aria-label="itemIcon" className="itemIcon">
+            {frontmatter.emoji}
+          </p>
+        )}
         {TITLE && <p className="itemTitle">{frontmatter.title}</p>}
       </div>
       {SUBTITLE && <p className="itemSubTitle">{frontmatter.subtitle}</p>}
       {CONTENT && (
-        <div
-          className="itemText"
-          dangerouslySetInnerHTML={{ __html: excerpt }}
-        />
+        <p className="itemText" dangerouslySetInnerHTML={{ __html: excerpt }} />
       )}
       {DATE && <p className="itemDate">{frontmatter.date}</p>}
     </div>

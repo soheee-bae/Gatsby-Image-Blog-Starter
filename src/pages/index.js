@@ -18,10 +18,6 @@ export default function Page({ data }) {
       headerImg={homePageBackground}
       title="More About Blog"
       subtitle="Do you want to know more about Gatsby Clean Blog Starter?"
-      category="Blog"
-      tags="about"
-      icon="🔎"
-      date="2023-02-06 9:51:13"
     >
       <div className="homeContainer">
         <Bio />
@@ -47,6 +43,10 @@ export const pageQuery = graphql`
             subtitle
             draft
             date(formatString: "MMMM DD, YYYY")
+            category
+            background
+            emoji
+            tags
           }
           fields {
             slug
