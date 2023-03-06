@@ -31,7 +31,6 @@ export const HeaderContent = ({
               {category}
             </p>
           )}
-          {tags && <p className="headerDetail">#{tags}</p>}
           {date && (
             <p className="headerDetail">
               <Calendar
@@ -45,6 +44,9 @@ export const HeaderContent = ({
         </div>
         <p className="headerTitle">{title}</p>
         <p className="headerSubTitle">{subtitle}</p>
+        <div className="headerTags">
+          {tags && <p className="headerTag"># {tags}</p>}
+        </div>
       </div>
     </div>
   );
