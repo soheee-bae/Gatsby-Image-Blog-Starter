@@ -4,7 +4,7 @@ import "./index.scss";
 const PostContent = ({ content }) => {
   return (
     <div
-      className="body-1 postContent"
+      className=" postContent"
       dangerouslySetInnerHTML={{ __html: content }}
     />
   );

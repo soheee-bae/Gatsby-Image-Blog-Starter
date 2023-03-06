@@ -9,5 +9,5 @@ module.exports = {
 
   homePageBackground: "coding.gif",
   aboutPageBackground: "coding.gif",
-  postsPageBackground: "pinkSky.png",
+  postsPageBackground: "coding.gif",
 };

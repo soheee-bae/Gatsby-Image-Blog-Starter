@@ -7,8 +7,5 @@
   gap: 80px;
   height: 100%;
   width: 90%;
-  @include md {
-    width: 100%;
-    max-width: $mainContent-width;
-  }
+
 }

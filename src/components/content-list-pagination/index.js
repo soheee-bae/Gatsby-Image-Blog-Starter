@@ -4,7 +4,7 @@ import { ContentItem } from "../content-Item";
 import { Pagination } from "../pagination";
 import { PAGE } from "../../constants";
 
-const ContentListPagination = ({
+export const ContentListPagination = ({
   filteredPosts,
   paginationRange,
   currentPage,
