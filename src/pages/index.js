@@ -7,6 +7,7 @@ import ContentList from "../components/content-list";
 import { Layout } from "../layout";
 import "../styles/_typography.scss";
 import "./index.scss";
+import { MoreButton } from "../components/moreButtøn";
 
 export default function Page({ data }) {
   const posts = data.allMarkdownRemark.edges;
@@ -23,6 +24,7 @@ export default function Page({ data }) {
         <Bio />
         <hr />
         <ContentList filteredPosts={filteredPosts} />
+        <MoreButton />
       </div>
     </Layout>
   );

@@ -1,5 +1,5 @@
 export function setLightTheme() {
-  //   document.documentElement.style.setProperty("--lg-black", "var(--dk-black");
+  document.documentElement.style.setProperty("--lg-black", "var(--dk-black");
 
   document.documentElement.style.setProperty(
     "--lg-light-black",
@@ -32,7 +32,7 @@ export function setLightTheme() {
 }
 
 export function setDarkTheme() {
-  //   document.documentElement.style.setProperty("--lg-black", "var(--dk-darker-white");
+  document.documentElement.style.setProperty("--lg-black", "var(--dk-white)");
 
   document.documentElement.style.setProperty(
     "--lg-light-black",
