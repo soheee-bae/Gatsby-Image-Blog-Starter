@@ -1,0 +1,21 @@
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 15px;
+}
+
+.category {
+  border: 2px solid var(--lg-lightest-gray);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--lg-light-black);
+  &:hover {
+    background-color: var(--lg-darker-white);
+  }
+}

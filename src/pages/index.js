@@ -8,6 +8,7 @@ import { Layout } from "../layout";
 import "../styles/_typography.scss";
 import "./index.scss";
 import { MoreButton } from "../components/moreButtøn";
+import Categories from "../components/categories";
 
 export default function Page({ data }) {
   const posts = data.allMarkdownRemark.edges;
@@ -22,6 +23,8 @@ export default function Page({ data }) {
     >
       <div className="homeContainer">
         <Bio />
+        <hr />
+        <Categories />
         <hr />
         <ContentList filteredPosts={filteredPosts} />
         <MoreButton />
