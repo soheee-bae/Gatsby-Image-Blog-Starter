@@ -31,6 +31,7 @@ export default function Posts({ data }) {
     >
       <div className="postsContainer">
         <Categories viewAll />
+        <hr />
         <ContentListPagination
           filteredPosts={filteredPosts}
           paginationRange={paginationRange}

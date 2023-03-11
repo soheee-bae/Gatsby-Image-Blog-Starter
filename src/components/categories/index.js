@@ -16,6 +16,7 @@ const Categories = ({ viewAll }) => {
           node {
             frontmatter {
               category
+              tags
             }
           }
         }
@@ -24,6 +25,18 @@ const Categories = ({ viewAll }) => {
   `);
   const edges = categoriesQuery.allMarkdownRemark.edges;
   const categories = edges.map((data) => data.node.frontmatter.category);
+
+  let tags = [];
+  edges.forEach((data) => {
+    if (data.node.frontmatter.category === selectedCategory) {
+      const tagLists = data.node.frontmatter.tags;
+      tagLists.forEach((tag) => tags.push(tag));
+    }
+  });
+
+  const filteredTags = tags.filter(
+    (value, index, array) => array.indexOf(value) === index
+  );
   const filteredCategories = categories.filter(
     (value, index, array) => array.indexOf(value) === index
   );
@@ -34,10 +47,7 @@ const Categories = ({ viewAll }) => {
         <div
           className="category"
           data-selected={selectedCategory === CATEGORY.ALL}
-          onClick={(e) => {
-            e.preventDefault();
-            handleSelect(CATEGORY.ALL);
-          }}
+          onClick={() => handleSelect(CATEGORY.ALL)}
         >
           All
         </div>
@@ -46,12 +56,18 @@ const Categories = ({ viewAll }) => {
         <div
           className="category"
           data-selected={selectedCategory === category}
-          onClick={(e) => {
-            e.preventDefault();
-            handleSelect(category);
-          }}
+          onClick={() => handleSelect(category)}
         >
           {category}
+        </div>
+      ))}
+      {filteredTags.map((tag) => (
+        <div
+          className="category"
+          // data-selected={selectedCategory === category}
+          // onClick={() => handleSelect(category)}
+        >
+          {tag}
         </div>
       ))}
     </div>
