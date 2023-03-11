@@ -24,23 +24,24 @@ const BlogPost = ({ data, pageContext }) => {
   });
 
   return (
-    <Layout
-      handlePageChange={handlePageChange}
-      handleSelect={handleSelect}
-      selectedCategory={selectedCategory}
-      currentPage={currentPage}
-    >
-      <div className="templateContainer">
-        <PostHeader data={frontmatter} />
-        <PostContent content={html} />
-        <PostNavigation
-          data={pageContext}
-          selectedCategory={selectedCategory}
-        />
-        <hr />
-        <Bio />
-      </div>
-    </Layout>
+    <></>
+    // <Layout
+    //   handlePageChange={handlePageChange}
+    //   handleSelect={handleSelect}
+    //   selectedCategory={selectedCategory}
+    //   currentPage={currentPage}
+    // >
+    //   <div className="templateContainer">
+    //     <PostHeader data={frontmatter} />
+    //     <PostContent content={html} />
+    //     <PostNavigation
+    //       data={pageContext}
+    //       selectedCategory={selectedCategory}
+    //     />
+    //     <hr />
+    //     <Bio />
+    //   </div>
+    // </Layout>
   );
 };
 

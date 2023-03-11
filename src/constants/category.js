@@ -1,3 +1,3 @@
 export const CATEGORY = {
-  ALL: "all",
+  ALL: "All",
 };

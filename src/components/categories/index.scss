@@ -18,4 +18,8 @@
   &:hover {
     background-color: var(--lg-darker-white);
   }
+  &[data-selected="true"] {
+    border: 1px solid red;
+    background-color: var(--lg-darker-white);
+  }
 }

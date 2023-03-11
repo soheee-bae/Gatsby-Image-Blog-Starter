@@ -1,24 +1,13 @@
 import { useMemo } from "react";
-import { CATEGORY } from "../constants/category";
 
 export const usePosts = ({ posts, selectedCategory }) => {
-  const splitedSearch = selectedCategory?.split("/");
-  const isRootDirectory = splitedSearch?.length <= 1;
-
+  console.log(posts);
+  console.log(selectedCategory);
   const filteredPosts = useMemo(
     () =>
-      posts.filter(({ node }) => {
-        let slug = node.fields.slug.toLowerCase();
-        let splitedSlug = slug?.split("/").filter(Boolean);
-
-        return (
-          selectedCategory === CATEGORY.ALL ||
-          (isRootDirectory && splitedSearch?.[0] === splitedSlug[0]) ||
-          (!isRootDirectory &&
-            splitedSearch?.[0] === splitedSlug[0] &&
-            slug.includes(selectedCategory))
-        );
-      }),
+      posts.filter(
+        ({ node }) => node.frontmatter.category === selectedCategory
+      ),
     [selectedCategory]
   );
 
