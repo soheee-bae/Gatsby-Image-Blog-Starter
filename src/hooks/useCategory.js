@@ -17,6 +17,7 @@ export const useCategory = () => {
     setSelectedCategory(category);
     navigate(`/posts/?${qs.stringify({ category })}`);
   };
+
   useEffect(() => {
     if (!search) {
       setSelectedCategory(CATEGORY.ALL);

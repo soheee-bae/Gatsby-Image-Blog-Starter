@@ -1,6 +1,6 @@
 export const PAGE = {
   SIBLINGCOUNT: 1,
-  PAGESIZE: 3,
+  PAGESIZE: 5,
 };
 
 export const DOTS = "...";

@@ -1,10 +1,11 @@
 import React from "react";
-import { graphql, navigate, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 
-import "./index.scss";
 import { useCategory } from "../../hooks/useCategory";
+import "./index.scss";
+import { CATEGORY } from "../../constants";
 
-const Categories = () => {
+const Categories = ({ viewAll }) => {
   const { handleSelect, selectedCategory } = useCategory();
   const categoriesQuery = useStaticQuery(graphql`
     query CategoriesQuery {
@@ -29,6 +30,18 @@ const Categories = () => {
 
   return (
     <div className="categories">
+      {viewAll && (
+        <div
+          className="category"
+          data-selected={selectedCategory === CATEGORY.ALL}
+          onClick={(e) => {
+            e.preventDefault();
+            handleSelect(CATEGORY.ALL);
+          }}
+        >
+          All
+        </div>
+      )}
       {filteredCategories.map((category) => (
         <div
           className="category"

@@ -3,12 +3,12 @@ import { graphql } from "gatsby";
 
 import Bio from "../components/bio";
 import ContentList from "../components/content-list";
+import { MoreButton } from "../components/moreButtøn";
+import Categories from "../components/categories";
 
 import { Layout } from "../layout";
 import "../styles/_typography.scss";
 import "./index.scss";
-import { MoreButton } from "../components/moreButtøn";
-import Categories from "../components/categories";
 
 export default function Page({ data }) {
   const posts = data.allMarkdownRemark.edges;

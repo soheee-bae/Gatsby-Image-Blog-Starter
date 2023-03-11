@@ -29,8 +29,8 @@ export default function Posts({ data }) {
       title="Posts"
       subtitle="Check out all the posts"
     >
-      <Categories />
       <div className="postsContainer">
+        <Categories viewAll />
         <ContentListPagination
           filteredPosts={filteredPosts}
           paginationRange={paginationRange}
