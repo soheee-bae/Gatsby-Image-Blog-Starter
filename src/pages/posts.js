@@ -18,9 +18,6 @@ export default function Posts({ data }) {
 
   const { selectedCategory } = useCategory();
   const { selectedTags } = useTag();
-  console.log("posts");
-  console.log(selectedTags);
-  console.log(selectedCategory);
 
   const { filteredPosts } = usePosts({ posts, selectedCategory, selectedTags });
   const { paginationRange, currentPage, handlePageChange } = usePagination({

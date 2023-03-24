@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { navigate } from "gatsby";
 import qs from "query-string";
-
-import { CATEGORY } from "../constants";
 
 export const useTag = () => {
   const location = typeof window !== "undefined" && window.location;
@@ -12,20 +10,26 @@ export const useTag = () => {
   const [selectedTags, setSelectedTags] = useState([]);
 
   const handleSelect = (tag) => {
-    let tagsList = [];
+    let tagsList = null;
     if (selectedTags.includes(tag)) {
       tagsList = selectedTags.filter((t) => t !== tag);
     } else {
       tagsList = [...selectedTags, tag];
     }
+    console.log(tagsList);
     setSelectedTags(tagsList);
-    setTimeout(() => {
-      const tagSearch = qs.stringify({
-        tag: tagsList,
-      });
-      navigate(`/posts/?${qs.stringify({ category })}&${tagSearch}`);
-    }, 100);
+    const tagSearch = qs.stringify({
+      tag: tagsList,
+    });
+    navigate(`/posts/?${qs.stringify({ category })}&${tagSearch}`);
   };
+
+  useEffect(() => {
+    // console.log(tag);
+    if (tag) {
+      setSelectedTags(tag);
+    }
+  }, [search]);
 
   return { selectedTags, handleSelect };
 };

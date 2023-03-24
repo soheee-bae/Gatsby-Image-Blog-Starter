@@ -2,8 +2,8 @@ import { useMemo } from "react";
 import { CATEGORY } from "../constants";
 
 export const usePosts = ({ posts, selectedCategory, selectedTags }) => {
-  console.log(posts);
-  console.log(selectedTags);
+  // console.log("usePosts");
+  // console.log(selectedTags);
   const filteredPosts = useMemo(
     () =>
       posts.filter(({ node }) => {
