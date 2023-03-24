@@ -29,29 +29,3 @@
     border: 2px solid var(--lg-lighter-gray);
   }
 }
-
-.tags {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.tag {
-  border: 2px solid var(--lg-lightest-gray);
-  padding: 5px 15px;
-  border-radius: 20px;
-  text-align: center;
-  font-weight: var(--font-semibold);
-  font-size: var(--text-sm);
-  cursor: pointer;
-  transition: all 0.3s;
-  color: var(--lg-light-black);
-  &:hover {
-    background-color: var(--lg-darker-white);
-  }
-  &[data-selected="true"] {
-    background-color: var(--lg-darker-white);
-    border: 2px solid var(--lg-lighter-gray);
-  }
-}

@@ -1,11 +1,12 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-
 import { useCategory } from "../../hooks/useCategory";
+import { useTag } from "../../hooks/useTag";
 import "./index.scss";
-import { CATEGORY } from "../../constants";
 
-const Categories = ({ edges }) => {
+const Tags = ({ edges }) => {
+  const { selectedTags, handleSelect } = useTag();
+  const { selectedCategory } = useCategory();
+
   let tags = [];
   edges.forEach((data) => {
     if (data.node.frontmatter.category === selectedCategory) {
@@ -23,8 +24,8 @@ const Categories = ({ edges }) => {
       {filteredTags.map((tag) => (
         <div
           className="tag"
-          // data-selected={selectedCategory === category}
-          // onClick={() => handleSelect(category)}
+          data-selected={selectedTags.includes(tag)}
+          onClick={() => handleSelect(tag)}
         >
           {tag}
         </div>
@@ -32,4 +33,4 @@ const Categories = ({ edges }) => {
     </div>
   );
 };
-export default Categories;
+export default Tags;

@@ -13,8 +13,7 @@ export const useCategory = () => {
     category || CATEGORY.ALL
   );
 
-  const handleSelect = (ev, category) => {
-    ev.preventDefault();
+  const handleSelect = (category) => {
     setSelectedCategory(category);
     navigate(`/posts/?${qs.stringify({ category })}`);
   };

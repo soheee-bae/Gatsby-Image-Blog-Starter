@@ -10,13 +10,19 @@ import { PAGE } from "../constants/page";
 import "./posts.scss";
 import { ContentListPagination } from "../components/content-list-pagination";
 import Categories from "../components/categories";
+import { useTag } from "../hooks/useTag";
 
 export default function Posts({ data }) {
   const posts = data.allMarkdownRemark.edges;
   const { postsPageBackground } = data.site.siteMetadata;
 
   const { selectedCategory } = useCategory();
-  const { filteredPosts } = usePosts({ posts, selectedCategory });
+  const { selectedTags } = useTag();
+  console.log("posts");
+  console.log(selectedTags);
+  console.log(selectedCategory);
+
+  const { filteredPosts } = usePosts({ posts, selectedCategory, selectedTags });
   const { paginationRange, currentPage, handlePageChange } = usePagination({
     totalCount: filteredPosts.length,
     siblingCount: PAGE.SIBLINGCOUNT,

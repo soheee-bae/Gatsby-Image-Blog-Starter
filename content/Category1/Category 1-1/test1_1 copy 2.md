@@ -5,8 +5,6 @@ subtitle: "This is test md file"
 category: "Category 1-1"
 tags:
   - tag1
-  - tag2
-  - tag3
 background: "coding.gif"
 draft: false
 ---

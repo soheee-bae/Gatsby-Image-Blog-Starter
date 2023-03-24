@@ -1,10 +1,10 @@
 import React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import "./index.scss";
 
 import { useCategory } from "../../hooks/useCategory";
-import "./index.scss";
 import { CATEGORY } from "../../constants";
-import qs from "query-string";
+import Tags from "../tags";
 
 const Categories = ({ viewAll }) => {
   const { handleSelect, selectedCategory } = useCategory();
@@ -38,23 +38,23 @@ const Categories = ({ viewAll }) => {
           <div
             className="category"
             data-selected={selectedCategory === CATEGORY.ALL}
-            onClick={(ev) => handleSelect(ev, CATEGORY.ALL)}
+            onClick={() => handleSelect(CATEGORY.ALL)}
           >
             All
           </div>
         )}
         {filteredCategories.map((category) => (
-          <Link
+          <div
             scr
             className="category"
             data-selected={selectedCategory === category}
-            to={`/posts/?${qs.stringify({ category })}`}
-            // onClick={(ev) => handleSelect(ev, category)}
+            onClick={() => handleSelect(category)}
           >
             {category}
-          </Link>
+          </div>
         ))}
       </div>
+      <Tags edges={edges} />
     </div>
   );
 };
