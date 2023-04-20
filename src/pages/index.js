@@ -17,8 +17,8 @@ export default function Page({ data }) {
   return (
     <Layout
       headerImg={homePageBackground}
-      title="More About Blog"
-      subtitle="Do you want to know more about Gatsby Clean Blog Starter?"
+      title="My Blog"
+      subtitle="Check around my blog!"
     >
       <div className="homeContainer">
         <Bio />
