@@ -20,14 +20,13 @@ export default function Posts({ data }) {
   const { selectedCategory } = useCategory();
   const { selectedTag } = useTag();
 
-  const { filteredPosts } = usePosts({ posts, selectedCategory });
+  const { filteredPosts } = usePosts({ posts, selectedCategory, selectedTag });
   const { paginationRange, currentPage, handlePageChange } = usePagination({
     totalCount: filteredPosts.length,
     siblingCount: PAGE.SIBLINGCOUNT,
     pageSize: PAGE.PAGESIZE,
   });
 
-  console.log(selectedTag);
   return (
     <Layout
       headerImg={postsPageBackground}
