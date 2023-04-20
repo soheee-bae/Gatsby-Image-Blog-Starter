@@ -36,7 +36,12 @@ const Tags = () => {
   return (
     <div className="tagsContainer">
       {tagList.map((tag) => (
-        <div scr className="tag" onClick={() => handleSelect(tag)}>
+        <div
+          scr
+          className="tag"
+          onClick={() => handleSelect(tag)}
+          data-selected={selectedTag.includes(tag)}
+        >
           {tag}
         </div>
       ))}

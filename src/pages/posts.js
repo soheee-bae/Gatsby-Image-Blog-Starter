@@ -11,12 +11,14 @@ import "./posts.scss";
 import { ContentListPagination } from "../components/content-list-pagination";
 import Categories from "../components/categories";
 import Tags from "../components/tags";
+import { useTag } from "../hooks/useTag";
 
 export default function Posts({ data }) {
   const posts = data.allMarkdownRemark.edges;
   const { postsPageBackground } = data.site.siteMetadata;
 
   const { selectedCategory } = useCategory();
+  const { selectedTag } = useTag();
 
   const { filteredPosts } = usePosts({ posts, selectedCategory });
   const { paginationRange, currentPage, handlePageChange } = usePagination({
@@ -25,6 +27,7 @@ export default function Posts({ data }) {
     pageSize: PAGE.PAGESIZE,
   });
 
+  console.log(selectedTag);
   return (
     <Layout
       headerImg={postsPageBackground}
