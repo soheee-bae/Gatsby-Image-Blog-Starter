@@ -1,7 +1,7 @@
 @import "../styles/size";
 
 .postsContainer {
-  max-width: $content-max-width;
+  width: $content-max-width;
   padding: 30px 20px;
   height: 100%;
   display: flex;

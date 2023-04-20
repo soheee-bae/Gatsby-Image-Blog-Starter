@@ -1,4 +1,4 @@
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import React from "react";
 import "./index.scss";
 import Theme from "../theme";
@@ -18,16 +18,16 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarContent">
-        <Link className="navbarTitle" to="/">
+        <a className="navbarTitle" href="/">
           {blogName}
-        </Link>
+        </a>
         <div className="navbarLinks">
-          <Link className="navbarItem" to="/posts">
+          <a className="navbarItem" href="/posts">
             Posts
-          </Link>
-          <Link className="navbarItem" to="/about">
+          </a>
+          <a className="navbarItem" href="/about">
             About
-          </Link>
+          </a>
           <Theme />
         </div>
       </div>

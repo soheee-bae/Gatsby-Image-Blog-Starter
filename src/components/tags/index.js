@@ -1,32 +1,42 @@
 import React from "react";
-import { useCategory } from "../../hooks/useCategory";
-import { useTag } from "../../hooks/useTag";
+import { graphql, useStaticQuery } from "gatsby";
 import "./index.scss";
+import { useTag } from "../../hooks/useTag";
 
-const Tags = ({ edges }) => {
-  const { selectedTags, handleSelect } = useTag();
-  const { selectedCategory } = useCategory();
+const Tags = () => {
+  const { handleSelect, selectedTag } = useTag();
 
-  let tags = [];
-  edges.forEach((data) => {
-    if (data.node.frontmatter.category === selectedCategory) {
-      const tagLists = data.node.frontmatter.tags;
-      tagLists.forEach((tag) => tags.push(tag));
+  const tagsQuery = useStaticQuery(graphql`
+    query TagsQuery {
+      allMarkdownRemark(
+        filter: { frontmatter: { title: { ne: "null" }, draft: { ne: true } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              tags
+            }
+          }
+        }
+      }
     }
-  });
+  `);
+  const edges = tagsQuery.allMarkdownRemark.edges;
+  const tags = edges.map((data) => data.node.frontmatter.tags);
 
-  const filteredTags = tags.filter(
-    (value, index, array) => array.indexOf(value) === index
+  let tagList = [];
+  tags.forEach((tag) =>
+    tag.forEach((t) => {
+      if (!tagList.includes(t)) {
+        tagList.push(t);
+      }
+    })
   );
 
   return (
-    <div className="tags">
-      {filteredTags.map((tag) => (
-        <div
-          className="tag"
-          data-selected={selectedTags.includes(tag)}
-          onClick={() => handleSelect(tag)}
-        >
+    <div className="tagsContainer">
+      {tagList.map((tag) => (
+        <div scr className="tag" onClick={() => handleSelect(tag)}>
           {tag}
         </div>
       ))}

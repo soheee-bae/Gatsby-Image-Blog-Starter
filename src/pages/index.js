@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import Bio from "../components/bio";
 import ContentList from "../components/content-list";
 import { MoreButton } from "../components/moreButtøn";
-import Categories from "../components/categories";
 
 import { Layout } from "../layout";
 import "../styles/_typography.scss";
@@ -23,8 +22,6 @@ export default function Page({ data }) {
     >
       <div className="homeContainer">
         <Bio />
-        <hr />
-        <Categories />
         <hr />
         <ContentList filteredPosts={filteredPosts} />
         <MoreButton />

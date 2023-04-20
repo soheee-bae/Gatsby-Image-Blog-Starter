@@ -1,35 +1,29 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { navigate } from "gatsby";
 import qs from "query-string";
+import { TAG } from "../constants";
 
 export const useTag = () => {
   const location = typeof window !== "undefined" && window.location;
   const { search } = location;
-  const { category, tag } = qs.parse(search);
+  const { category } = qs.parse(search);
 
-  const [selectedTags, setSelectedTags] = useState([]);
+  const [selectedTag, setSelectedTag] = useState([]);
 
   const handleSelect = (tag) => {
-    let tagsList = null;
-    if (selectedTags.includes(tag)) {
-      tagsList = selectedTags.filter((t) => t !== tag);
+    let finalTags = [];
+    if (selectedTag.includes(tag) && selectedTag.length !== 0) {
+      finalTags = selectedTag?.filter((t) => t !== tag);
     } else {
-      tagsList = [...selectedTags, tag];
+      finalTags = [...selectedTag, tag];
     }
-    console.log(tagsList);
-    setSelectedTags(tagsList);
-    const tagSearch = qs.stringify({
-      tag: tagsList,
-    });
-    navigate(`/posts/?${qs.stringify({ category })}&${tagSearch}`);
+    setSelectedTag(finalTags);
+
+    const tags = finalTags.map((tag) => `&${qs.stringify({ tag })}`).join("");
+    navigate(`/posts/?${qs.stringify({ category })}${tags}`);
   };
 
-  useEffect(() => {
-    // console.log(tag);
-    if (tag) {
-      setSelectedTags(tag);
-    }
-  }, [search]);
-
-  return { selectedTags, handleSelect };
+  console.log("selectedTag");
+  console.log(selectedTag);
+  return { selectedTag, handleSelect };
 };

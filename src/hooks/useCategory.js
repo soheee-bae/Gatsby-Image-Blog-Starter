@@ -7,7 +7,7 @@ import { CATEGORY } from "../constants";
 export const useCategory = () => {
   const location = typeof window !== "undefined" && window.location;
   const { search } = location;
-  const { category } = qs.parse(search);
+  const { category, tag } = qs.parse(search);
 
   const [selectedCategory, setSelectedCategory] = useState(
     category || CATEGORY.ALL
@@ -15,7 +15,12 @@ export const useCategory = () => {
 
   const handleSelect = (category) => {
     setSelectedCategory(category);
-    navigate(`/posts/?${qs.stringify({ category })}`);
+    const tags = !tag
+      ? ""
+      : typeof tag === "string"
+      ? `&${qs.stringify({ tag })}`
+      : tag?.map((tag) => `&${qs.stringify({ tag })}`).join("");
+    navigate(`/posts/?${qs.stringify({ category })}${tags}`);
   };
 
   useEffect(() => {

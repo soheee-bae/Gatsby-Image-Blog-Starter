@@ -4,9 +4,8 @@ import "./index.scss";
 
 import { useCategory } from "../../hooks/useCategory";
 import { CATEGORY } from "../../constants";
-import Tags from "../tags";
 
-const Categories = ({ viewAll }) => {
+const Categories = () => {
   const { handleSelect, selectedCategory } = useCategory();
   const categoriesQuery = useStaticQuery(graphql`
     query CategoriesQuery {
@@ -17,7 +16,6 @@ const Categories = ({ viewAll }) => {
           node {
             frontmatter {
               category
-              tags
             }
           }
         }
@@ -34,18 +32,15 @@ const Categories = ({ viewAll }) => {
   return (
     <div className="categoryContainer">
       <div className="categories">
-        {viewAll && (
-          <div
-            className="category"
-            data-selected={selectedCategory === CATEGORY.ALL}
-            onClick={() => handleSelect(CATEGORY.ALL)}
-          >
-            All
-          </div>
-        )}
+        <div
+          className="category"
+          data-selected={selectedCategory === CATEGORY.ALL}
+          onClick={() => handleSelect(CATEGORY.ALL)}
+        >
+          All
+        </div>
         {filteredCategories.map((category) => (
           <div
-            scr
             className="category"
             data-selected={selectedCategory === category}
             onClick={() => handleSelect(category)}
@@ -54,7 +49,6 @@ const Categories = ({ viewAll }) => {
           </div>
         ))}
       </div>
-      <Tags edges={edges} />
     </div>
   );
 };

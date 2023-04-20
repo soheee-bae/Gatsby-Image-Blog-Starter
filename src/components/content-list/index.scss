@@ -1,6 +1,13 @@
 .contentListTitle {
   font-size: var(--text-4xl);
   font-weight: var(--font-medium);
-  margin-top: 0;
+  margin: 0 0 20px;
   color: var(--lg-light-black);
+}
+
+.contentListSubtitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-normal);
+  color: var(--lg-dark-gray);
+  margin-bottom: 5px;
 }
