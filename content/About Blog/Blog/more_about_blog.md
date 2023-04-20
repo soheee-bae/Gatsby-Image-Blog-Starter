@@ -11,7 +11,9 @@ emoji: "🥛"
 draft: false
 ---
 
-Welcome to Gatsby Clean Blog Starter!
+## :fire: Welcome to Gatsby Clean Blog Starter!
+
+&nbsp;
 
 ### 1. Support markdown with Five frontmatter
 

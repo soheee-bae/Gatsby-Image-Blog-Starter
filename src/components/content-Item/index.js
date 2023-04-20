@@ -23,7 +23,7 @@ export const ContentItem = ({ post }) => {
     >
       {CATEGORY && <p className="itemCategory">{frontmatter.category}</p>}
       <div className="itemHeader">
-        {ICON && (
+        {ICON && frontmatter.emoji && (
           <p role="img" aria-label="itemIcon" className="itemIcon">
             {frontmatter.emoji}
           </p>

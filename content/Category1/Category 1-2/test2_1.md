@@ -6,8 +6,6 @@ category: "Category 1-2"
 tags:
   - tag1
   - tag2
-  - tag4
-  - tag5
 background: "coding.gif"
 draft: false
 ---

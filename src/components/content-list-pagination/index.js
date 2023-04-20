@@ -17,6 +17,7 @@ export const ContentListPagination = ({
   return (
     <div>
       <div className="listContainer">
+        <p className="listTitle">Total of {filteredPosts?.length} posts</p>
         {finalPosts.map((post, index) => (
           <ContentItem key={index} post={post} />
         ))}

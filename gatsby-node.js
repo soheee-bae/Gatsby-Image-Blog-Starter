@@ -22,7 +22,13 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                date
+                subtitle
                 category
+                tags
+                background
+                emoji
+                draft
               }
             }
             previous {
@@ -31,6 +37,13 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                date
+                subtitle
+                category
+                tags
+                background
+                emoji
+                draft
               }
             }
             next {
@@ -39,6 +52,13 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                date
+                subtitle
+                category
+                tags
+                background
+                emoji
+                draft
               }
             }
           }
