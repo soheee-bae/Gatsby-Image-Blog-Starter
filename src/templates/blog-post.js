@@ -17,7 +17,6 @@ const BlogPost = ({ data, pageContext }) => {
   const { frontmatter, html } = markdownRemark;
   const { selectedCategory } = useCategory();
 
-  console.log(frontmatter);
   return (
     <Layout
       headerImg={frontmatter.background}

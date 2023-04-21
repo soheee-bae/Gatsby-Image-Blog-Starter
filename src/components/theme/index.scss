@@ -8,9 +8,7 @@
   svg {
     margin-bottom: -1px;
   }
-  &:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
+
   &[data-light="false"] {
     svg {
       padding: 5px 2px 0 2px;

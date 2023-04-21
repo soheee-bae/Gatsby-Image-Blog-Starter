@@ -1,9 +1,13 @@
 import { useStaticQuery, graphql } from "gatsby";
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
 import Theme from "../theme";
+import { useScroll } from "../../hooks/useScroll";
 
 export const Navbar = () => {
+  const [checked, setChecked] = useState(true);
+  const { scrollTriggered } = useScroll();
+
   const navbarQuery = useStaticQuery(graphql`
     query NavbarQuery {
       site {
@@ -16,7 +20,12 @@ export const Navbar = () => {
   const { blogName } = navbarQuery.site.siteMetadata;
 
   return (
-    <div className="navbar">
+    <div
+      id="scroller"
+      className="navbar"
+      data-scroll={scrollTriggered}
+      data-light={checked}
+    >
       <div className="navbarContent">
         <a className="navbarTitle" href="/">
           {blogName}
@@ -28,7 +37,11 @@ export const Navbar = () => {
           <a className="navbarItem" href="/about">
             About
           </a>
-          <Theme />
+          <Theme
+            checked={checked}
+            setChecked={setChecked}
+            scrollTriggered={scrollTriggered}
+          />
         </div>
       </div>
     </div>

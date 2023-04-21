@@ -1,5 +1,5 @@
 export function setLightTheme() {
-  document.documentElement.style.setProperty("--lg-black", "var(--dk-black");
+  document.documentElement.style.setProperty("--lg-black", "var(--dk-black)");
 
   document.documentElement.style.setProperty(
     "--lg-light-black",

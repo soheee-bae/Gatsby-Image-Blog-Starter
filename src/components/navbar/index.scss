@@ -10,6 +10,34 @@
   position: fixed;
   top: 0;
   height: $navbar-height;
+  a {
+    color: var(--default-white);
+    &:hover {
+      color: var(--default-lightest-gray);
+    }
+  }
+  &[data-scroll="true"] {
+    background: var(--default-white);
+    opacity: 0.9;
+    transition: all 0.3s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 4px 2px -2px;
+    a {
+      color: var(--default-black);
+      &:hover {
+        color: var(--default-light-black);
+      }
+    }
+    &[data-light="false"] {
+      background: var(--default-light-black);
+
+      a {
+        color: var(--default-white);
+        &:hover {
+          color: var(--default-lightest-gray);
+        }
+      }
+    }
+  }
 }
 
 .navbarContent {
@@ -22,7 +50,6 @@
 }
 
 .navbarTitle {
-  color: var(--default-white);
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
   text-decoration: none;
@@ -36,11 +63,7 @@
 }
 
 .navbarItem {
-  color: var(--default-white);
   font-size: var(--text-base);
   font-weight: var(--font-medium);
   text-decoration: none;
-  &:hover {
-    color: var(--default-lightest-gray);
-  }
 }

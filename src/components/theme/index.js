@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { THEME } from "../../constants";
 import { getTheme, setTheme } from "../../utils";
 import { setDarkTheme, setLightTheme } from "../../utils/theme";
@@ -8,9 +8,7 @@ import LightOff from "../../../assets/icons/lightOff";
 
 import "./index.scss";
 
-const Theme = () => {
-  const [checked, setChecked] = useState(true);
-
+const Theme = ({ checked, setChecked, scrollTriggered }) => {
   const getNewTheme = (checked) => {
     return checked ? THEME.LIGHT : THEME.DARK;
   };
@@ -38,6 +36,7 @@ const Theme = () => {
     <div
       className="themeSwitch"
       data-light={checked}
+      data-scroll={scrollTriggered}
       onClick={() => handleSwitch(!checked)}
     >
       {checked ? (
@@ -45,14 +44,16 @@ const Theme = () => {
           width={28}
           height={28}
           strokeWidth={2}
-          color="var(--default-darker-white)"
+          color={
+            scrollTriggered ? "var(--default-black)" : "var(--default-white)"
+          }
         />
       ) : (
         <LightOff
           width={23}
           height={23}
           strokeWidth={2.5}
-          color="var(--default-darker-white)"
+          color="var(--default-white)"
         />
       )}
     </div>
