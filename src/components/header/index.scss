@@ -8,7 +8,7 @@
   position: relative;
   img {
     filter: brightness(0.5) contrast(0.9);
-    transform: scale(1.01, 1.01);
+    transform: scale(1.015, 1.015);
     height: 100%;
     width: 100%;
     animation-name: growShrink;
@@ -27,6 +27,6 @@
   100% {
     filter: brightness(0.5) contrast(0.9);
     opacity: 1;
-    transform: scale(1.01, 1.01);
+    transform: scale(1.015, 1.015);
   }
 }
