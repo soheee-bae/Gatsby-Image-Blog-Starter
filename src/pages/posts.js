@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../layout";
 
@@ -12,6 +12,7 @@ import { ContentListPagination } from "../components/content-list-pagination";
 import Categories from "../components/categories";
 import Tags from "../components/tags";
 import { useTag } from "../hooks/useTag";
+import { SearchField } from "../components/search-field";
 
 export default function Posts({ data }) {
   const posts = data.allMarkdownRemark.edges;
@@ -20,7 +21,13 @@ export default function Posts({ data }) {
   const { selectedCategory } = useCategory();
   const { selectedTag } = useTag();
 
-  const { filteredPosts } = usePosts({ posts, selectedCategory, selectedTag });
+  const [search, setSearch] = useState("");
+  const { filteredPosts } = usePosts({
+    posts,
+    selectedCategory,
+    selectedTag,
+    search,
+  });
   const { paginationRange, currentPage, handlePageChange } = usePagination({
     totalCount: filteredPosts.length,
     siblingCount: PAGE.SIBLINGCOUNT,
@@ -34,6 +41,7 @@ export default function Posts({ data }) {
       subtitle="Check out all the posts"
     >
       <div className="postsContainer">
+        <SearchField setSearch={setSearch} />
         <Categories />
         <Tags />
         <hr />

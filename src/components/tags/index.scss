@@ -6,7 +6,7 @@
 }
 
 .tag {
-  border: 2px solid var(--lg-lightest-gray);
+  border: 1px solid var(--lg-lightest-gray);
   padding: 5px 15px;
   border-radius: 20px;
   text-align: center;
@@ -20,6 +20,6 @@
   }
   &[data-selected="true"] {
     background-color: var(--lg-darker-white);
-    border: 2px solid var(--lg-lighter-gray);
+    border: 1px solid var(--lg-darkest-gray);
   }
 }

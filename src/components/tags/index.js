@@ -42,7 +42,7 @@ const Tags = () => {
           onClick={() => handleSelect(tag)}
           data-selected={selectedTag.includes(tag)}
         >
-          {tag}
+          #{tag}
         </div>
       ))}
     </div>
