@@ -1,8 +1,25 @@
-
-
 ## :eyes: Demo
 
-https://gatsbycleanblogstarterkit.gatsbyjs.io/
+https://gatsbyimageblogstartermain.gatsbyjs.io/
+
+Light Mode :
+
+<div>
+  <img src="./assets/readMe/lightMode_1.png" width="300" />
+  <img src="./assets/readMe/lightMode_3.png" width="300" />
+  <img src="./assets/readMe/lightMode_4.png" width="300" />
+</div>
+
+<br />
+
+Dark Mode :
+
+<div>
+  <img src="./assets/readMe/darkMode_2.png" width="300"/>
+  <img src="./assets/readMe/darkMode_1.png" width="300" />
+  <img src="./assets/readMe/darkMode_3.png" width="300" />
+</div>
+<br/>
 
 ## :fire: Quick Start
 
