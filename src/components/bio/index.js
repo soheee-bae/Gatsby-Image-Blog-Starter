@@ -3,6 +3,10 @@ import Image from "gatsby-image";
 import { graphql, navigate, useStaticQuery } from "gatsby";
 
 import "./index.scss";
+import { Email } from "../../../assets/icons/email";
+import { LinkedIn } from "../../../assets/icons/linkedIn";
+import { Instagram } from "../../../assets/icons/instagram";
+import { Github } from "../../../assets/icons/github";
 
 const Bio = () => {
   const handleClick = () => {
@@ -50,6 +54,12 @@ const Bio = () => {
           </span>
         </div>
         <p className="bioText">{bio}</p>
+        <div className="bioIcons">
+          <Email />
+          <Github />
+          <LinkedIn />
+          <Instagram />
+        </div>
       </div>
     </div>
   );

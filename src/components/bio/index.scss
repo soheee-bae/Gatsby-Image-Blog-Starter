@@ -4,7 +4,6 @@
 .bioContainer {
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 20px;
   padding: 30px 70px;
 }
@@ -54,4 +53,23 @@
   margin: 0;
   padding: 5px;
   color: var(--lg-dark-gray);
+}
+
+.bioIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  padding: 10px 5px 5px;
+
+  svg {
+    opacity: 0.8;
+
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.2s;
+      opacity: 1;
+    }
+  }
 }
