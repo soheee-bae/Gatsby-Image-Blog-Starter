@@ -8,11 +8,12 @@ export const usePosts = ({ posts, selectedCategory, selectedTag }) => {
         let tags = node.frontmatter.tags.filter(
           (tag) => selectedTag.indexOf(tag) != -1
         );
+
+        let noTag = selectedTag.length === 0;
         return (
-          selectedCategory === CATEGORY.ALL ||
+          (selectedCategory === CATEGORY.ALL && (noTag || tags.length > 0)) ||
           (node.frontmatter.category === selectedCategory &&
-            selectedTag.length === 0) ||
-          (node.frontmatter.category === selectedCategory && tags.length > 0)
+            (noTag || tags.length > 0))
         );
       }),
     [selectedCategory, selectedTag]

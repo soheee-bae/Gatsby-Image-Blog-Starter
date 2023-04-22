@@ -31,7 +31,7 @@ export const Navbar = () => {
           {blogName}
         </a>
         <div className="navbarLinks">
-          <a className="navbarItem" href="/posts">
+          <a className="navbarItem" href="/posts/?category=All">
             Posts
           </a>
           <a className="navbarItem" href="/about">

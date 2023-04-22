@@ -14,13 +14,21 @@ export const ContentListPagination = ({
   const lastPageIndex = firstPageIndex + PAGE.PAGESIZE;
   let finalPosts = filteredPosts.slice(firstPageIndex, lastPageIndex);
 
+  let noPosts = filteredPosts?.length === 0;
+
   return (
     <div>
-      <div className="listContainer">
+      <div>
         <p className="listTitle">Total of {filteredPosts?.length} posts</p>
-        {finalPosts.map((post, index) => (
-          <ContentItem key={index} post={post} />
-        ))}
+        {noPosts ? (
+          <div className="emptyContainer">There are no posts to display. </div>
+        ) : (
+          <>
+            {finalPosts.map((post, index) => (
+              <ContentItem key={index} post={post} />
+            ))}
+          </>
+        )}
       </div>
       <Pagination
         paginationRange={paginationRange}

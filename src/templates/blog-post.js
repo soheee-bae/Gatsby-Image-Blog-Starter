@@ -6,9 +6,7 @@ import PostContent from "../components/post-content";
 import PostNavigation from "../components/post-navigation";
 
 import { useCategory } from "../hooks/useCategory";
-import { usePagination } from "../hooks/usePagination";
 
-import { PAGE } from "../constants";
 import { Layout } from "../layout";
 import "./blog-post.scss";
 
