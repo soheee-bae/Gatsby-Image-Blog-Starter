@@ -2,8 +2,8 @@
   color: var(--lg-black);
   font-weight: var(--font-semibold);
   font-size: var(--text-sm);
-  background-color: var(--lg-darker-white);
-  border: none;
+  background-color: var(--lg-lightest-gray);
+  border: 3px solid transparent;
   padding: 20px 10px;
   border-radius: 8px;
   max-width: 270px;
@@ -17,7 +17,9 @@
   cursor: pointer;
   margin-bottom: 20px;
   transition: all 0.3s;
+  text-decoration: none;
+
   &:hover {
-    background-color: var(--lg-lightest-gray);
+    border: 3px solid var(--lg-lighter-gray);
   }
 }

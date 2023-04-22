@@ -1,41 +1,41 @@
 :root {
   /** Light Theme **/
   --lg-black: #000000;
-  --lg-light-black: #212529;
-  --lg-darkest-gray: #343a40;
-  --lg-darker-gray: #495057;
-  --lg-dark-gray: #6c757d;
-  --lg-normal-gray: #adb5bd;
-  --lg-light-gray: #ced4da;
+  --lg-light-black: #121212;
+  --lg-darkest-gray: #282828;
+  --lg-darker-gray: #404040;
+  --lg-dark-gray: #575757;
+  --lg-normal-gray: #7a7a7a;
+  --lg-light-gray: #919191;
   --lg-lighter-gray: #dee2e6;
-  --lg-lightest-gray: #e9ecef;
-  --lg-darker-white: #f8f9fa;
+  --lg-lightest-gray: #e6e6e9;
+  --lg-darker-white: #f4f4f6;
   --lg-white: #ffffff;
   --lg-blue: #0969da;
 
   /** Dark Theme **/
   --dk-black: #000000;
-  --dk-light-black: #212529;
-  --dk-darkest-gray: #343a40;
-  --dk-darker-gray: #495057;
-  --dk-dark-gray: #6c757d;
-  --dk-normal-gray: #adb5bd;
-  --dk-light-gray: #ced4da;
-  --dk-lighter-gray: #dee2e6;
-  --dk-lightest-gray: #e9ecef;
-  --dk-darker-white: #f8f9fa;
+  --dk-light-black: #121212;
+  --dk-darkest-gray: #282828;
+  --dk-darker-gray: #404040;
+  --dk-dark-gray: #575757;
+  --dk-normal-gray: #7a7a7a;
+  --dk-light-gray: #919191;
+  --dk-lighter-gray: #d3d3d7;
+  --dk-lightest-gray: #e6e6e9;
+  --dk-darker-white: #f4f4f6;
   --dk-white: #ffffff;
 
   /** Default colors that wont change with theme switcher **/
   --default-black: #000000;
-  --default-light-black: #212529;
-  --default-darkest-gray: #343a40;
-  --default-darker-gray: #495057;
-  --default-dark-gray: #6c757d;
-  --default-normal-gray: #adb5bd;
-  --default-light-gray: #ced4da;
-  --default-lighter-gray: #dee2e6;
-  --default-lightest-gray: #e9ecef;
-  --default-darker-white: #f8f9fa;
+  --default-light-black: #121212;
+  --default-darkest-gray: #282828;
+  --default-darker-gray: #404040;
+  --default-dark-gray: #575757;
+  --default-normal-gray: #7a7a7a;
+  --default-light-gray: #919191;
+  --default-lighter-gray: #d3d3d7;
+  --default-lightest-gray: #e6e6e9;
+  --default-darker-white: #f4f4f6;
   --default-white: #ffffff;
 }

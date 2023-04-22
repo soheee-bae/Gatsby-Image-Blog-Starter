@@ -13,7 +13,6 @@
 
   padding: 10px 12px;
   border-radius: 8px;
-  background-color: var(--lg-darker-white);
   color: var(--lg-darker-gray);
   font-size: var(--text-sm);
 
@@ -31,7 +30,8 @@
   }
 
   &:hover {
-    background-color: var(--lg-lightest-gray);
     color: var(--lg-darkest-gray);
+    transform: scale(1.05);
+    transition: all 0.2s;
   }
 }

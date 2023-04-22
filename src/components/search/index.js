@@ -13,7 +13,7 @@ export const SearchField = ({ setSearch }) => {
 
   return (
     <div className="search">
-      <Search />
+      <Search color="var(--lg-darkest-gray)" />
       <input
         type="text"
         onKeyUp={(e) => {

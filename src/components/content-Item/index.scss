@@ -9,11 +9,10 @@
   }
   .emptyBorder {
     width: 0px;
-    background-color: var(--lg-normal-gray);
+    background-color: var(--lg-lighter-gray);
     border-radius: 20px;
   }
   &:hover {
-    background-color: var(--lg-darker-white);
     transition: all 0.7s;
     .emptyBorder {
       width: 8px;

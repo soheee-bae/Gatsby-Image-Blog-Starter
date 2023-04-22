@@ -1,0 +1,19 @@
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  svg {
+    left: 10px;
+    position: absolute;
+  }
+  input {
+    width: 650px;
+    border-radius: 5px;
+    padding: 13px 13px 13px 40px;
+    border: 1px solid var(--lg-dark-gray);
+    outline: none;
+    font-size: var(--text-md);
+    background-color: var(--lg-white);
+    color: var(--lg-light-black);
+  }
+}

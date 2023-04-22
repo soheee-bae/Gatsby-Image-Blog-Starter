@@ -17,8 +17,14 @@ export function setLightTheme() {
     "--lg-dark-gray",
     "var(--dk-dark-gray)"
   );
-  // document.documentElement.style.setProperty("--lg-light-gray", "--dk-light-gray");
-  // document.documentElement.style.setProperty("--lg-lighter-gray", "--dk-lighter-gray");
+  document.documentElement.style.setProperty(
+    "--lg-light-gray",
+    "var(--dk-light-gray)"
+  );
+  document.documentElement.style.setProperty(
+    "--lg-lighter-gray",
+    "var(--dk-lighter-gray)"
+  );
 
   document.documentElement.style.setProperty(
     "--lg-lightest-gray",
@@ -36,7 +42,7 @@ export function setDarkTheme() {
 
   document.documentElement.style.setProperty(
     "--lg-light-black",
-    "var(--dk-white)"
+    "var(--dk-darker-white)"
   );
   document.documentElement.style.setProperty(
     "--lg-darkest-gray",
@@ -50,8 +56,14 @@ export function setDarkTheme() {
     "--lg-dark-gray",
     "var(--dk-light-gray)"
   );
-  // document.documentElement.style.setProperty("--lg-light-gray", "--dk-dark-gray");
-  // document.documentElement.style.setProperty("--lg-lighter-gray", "--dk-darker-gray");
+  document.documentElement.style.setProperty(
+    "--lg-light-gray",
+    "var(--dk-dark-gray)"
+  );
+  document.documentElement.style.setProperty(
+    "--lg-lighter-gray",
+    "var(--dk-darker-gray)"
+  );
 
   document.documentElement.style.setProperty(
     "--lg-lightest-gray",

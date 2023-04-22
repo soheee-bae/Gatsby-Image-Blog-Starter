@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "gatsby-image";
-import { graphql, navigate, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 
 import "./index.scss";
 import { Email } from "../../../assets/icons/email";
@@ -9,10 +9,6 @@ import { Instagram } from "../../../assets/icons/instagram";
 import { Github } from "../../../assets/icons/github";
 
 const Bio = () => {
-  const handleClick = () => {
-    navigate("/about");
-  };
-
   const bioQuery = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(relativePath: { regex: "/potato.png/" }) {
@@ -44,21 +40,14 @@ const Bio = () => {
       </div>
       <div className="bioContent">
         <div>
-          <span
-            className="bioLink"
-            onClick={handleClick}
-            onKeyDown={handleClick}
-            role="presentation"
-          >
-            {author}
-          </span>
+          <span className="bioLink">{author}</span>
         </div>
         <p className="bioText">{bio}</p>
         <div className="bioIcons">
-          <Email />
-          <Github />
-          <LinkedIn />
-          <Instagram />
+          <Email color="var(--lg-light-black)" />
+          <Github color="var(--lg-light-black)" />
+          <LinkedIn color="var(--lg-light-black)" />
+          <Instagram color="var(--lg-light-black)" />
         </div>
       </div>
     </div>

@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../layout";
+import "./posts.scss";
 
 import { usePagination } from "../hooks/usePagination";
 import { useCategory } from "../hooks/useCategory";
 import { usePosts } from "../hooks/usePosts";
+import { useTag } from "../hooks/useTag";
 import { PAGE } from "../constants/page";
 
-import "./posts.scss";
 import { ContentListPagination } from "../components/content-list-pagination";
 import Categories from "../components/categories";
+import { SearchField } from "../components/search";
 import Tags from "../components/tags";
-import { useTag } from "../hooks/useTag";
-import { SearchField } from "../components/search-field";
 
 export default function Posts({ data }) {
   const posts = data.allMarkdownRemark.edges;

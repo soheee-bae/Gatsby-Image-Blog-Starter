@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  padding: 30px 70px;
+  padding: 30px 50px;
 }
 
 .bioImage {
@@ -19,8 +19,10 @@
   img {
     margin: auto;
     border-radius: 50%;
-    width: 100px !important;
-    height: 100px !important;
+    width: 91px !important;
+    height: 91px !important;
+    border: 2px solid var(--lg-lighter-gray);
+    padding: 2px;
   }
 }
 
@@ -37,13 +39,6 @@
   width: auto;
   padding: 5px;
   color: var(--lg-darkest-gray);
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--lg-darker-white);
-    color: var(--lg-light-black);
-    border-radius: 5px;
-  }
 }
 
 .bioText {
