@@ -28,14 +28,14 @@ Dark Mode :
 Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the gatsby-clean-blog starter.
 
 ```
-npx gatsby new gatsby-clean-blog-starter https://github.com/soheee-bae/Gatsby-Clean-Blog-Starter
+npx gatsby new gatsby-image-blog-starter https://github.com/soheee-bae/Gatsby-Image-Blog-Starter
 ```
 
 > if you are not using `npx`, following [Gatsby Getting Started](https://www.gatsbyjs.com/docs/quick-start/)
 
 ```
 npm install -g gatsby-cli
-gatsby new gatsby-clean-blog-starter https://github.com/soheee-bae/Gatsby-Clean-Blog-Starter
+gatsby new gatsby-image-blog-starter https://github.com/soheee-bae/Gatsby-Image-Blog-Starter
 ```
 
 ### 2. Start developing
