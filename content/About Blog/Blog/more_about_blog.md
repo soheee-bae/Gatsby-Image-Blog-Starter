@@ -15,15 +15,20 @@ draft: false
 
 &nbsp;
 
-### 1. Support markdown with Five frontmatter
+### 1. Support markdown with Eight frontmatter
 
 ```
 ---
 title: "More About Blog"
-date: 2023-02-05 10:51:13
+date: 2023-02-06 9:51:13
 subtitle: "Do you want to know more about Gatsby Clean Blog Starter?"
 category: "Blog"
-draft: false // when it is true, this post won't be visible
+tags:
+  - about
+  - information
+background: "coding.gif"
+emoji: "🥛"
+draft: false
 ---
 ```
 
@@ -31,7 +36,10 @@ draft: false // when it is true, this post won't be visible
 2. date
 3. subtitle
 4. category
-5. draft
+5. tags
+6. background : background image for the post header
+7. emoji
+8. draft : when this is true, the post will be hidden
 
 ### 2. Support emoji
 
@@ -50,20 +58,23 @@ export const PAGE = {
 };
 ```
 
-### 5. Support nested navbar
+### 5. Support search and filtering based on category and tags
 
-The navigation list is based on the directory structure in `/src/content`.
-As you add a new directory, it will be listed as another category in the navbar!
+Categories and tags will be added automatically as you add a new blog (.md file in `/content`).
+
+You will be able to filter the posts by clicking category or tag badges and also search for the blog title.
 
 ### 6. Resize layout
 
 You can resize layout (e.g. `height of footer`) in `src/styles/_size.scss`!
 
 ```
-$footer-height: 60px;
-$navbar-width-bigScreen: 240px;
-$navbar-height-smallScreen: 60px;
-$innerContainer-width: 150px;
+...
+$content-max-width: 700px;
+$footer-height: 150px;
+$navbar-height: 70px;
+$header-min-height: 600px;
+$header-max-height: 750px;
 ...
 ```
 
@@ -93,4 +104,20 @@ export const CONTENTITEM = {
   DATE: true,
   CONTENT: true,
 };
+```
+
+### 9. Custom header details
+
+You can display or hide (`headerImg, title, subtitle, category, tags, icon, date`) by passing datas to `Layout`!
+
+```
+ <Layout
+      headerImg={frontmatter.background}
+      title={frontmatter.title}
+      subtitle={frontmatter.subtitle}
+      category={frontmatter.category}
+      tags={frontmatter.tags}
+      icon={frontmatter.emoji}
+      date={frontmatter.date}
+    > ...
 ```
