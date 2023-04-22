@@ -5,9 +5,9 @@ https://gatsbyimageblogstartermain.gatsbyjs.io/
 Light Mode :
 
 <div>
-  <img src="./assets/readMe/lightMode_1.png" width="300" />
-  <img src="./assets/readMe/lightMode_3.png" width="300" />
-  <img src="./assets/readMe/lightMode_4.png" width="300" />
+  <img src="./assets/readMe/lightMode_1.png" width="250" />
+  <img src="./assets/readMe/lightMode_3.png" width="250" />
+  <img src="./assets/readMe/lightMode_4.png" width="250" />
 </div>
 
 <br />
@@ -15,9 +15,9 @@ Light Mode :
 Dark Mode :
 
 <div>
-  <img src="./assets/readMe/darkMode_2.png" width="300"/>
-  <img src="./assets/readMe/darkMode_1.png" width="300" />
-  <img src="./assets/readMe/darkMode_3.png" width="300" />
+  <img src="./assets/readMe/darkMode_2.png" width="250"/>
+  <img src="./assets/readMe/darkMode_1.png" width="250" />
+  <img src="./assets/readMe/darkMode_3.png" width="250" />
 </div>
 <br/>
 
