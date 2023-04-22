@@ -1,5 +1,4 @@
-<img src="./assets/images/Starter-Light.png"  >
-<img src="./assets/images/Starter-Dark.png"  >
+
 
 ## :eyes: Demo
 
@@ -87,7 +86,7 @@ src/styles
 
 ### :mag: Tip (Things you can customize!)
 
-- Profile image : replace file in `/assets/images/moon.jpeg`.
+- Profile image : replace file in `src/components/bio/index.js`.
 - Pagination : set sibling count (of the current page) and page size (number of posts per page) in `src/constants/page.js`.
 - Resize layout : You can resize layout (e.g. `height of footer`) in `src/styles/_size.scss`.
 - Change color : All colors that have been used in this blog are in `src/styles/_color.scss`. You can simply change hex code color from `src/styles/_color.scss`!

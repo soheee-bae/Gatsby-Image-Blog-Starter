@@ -41,6 +41,7 @@ const Categories = () => {
         </div>
         {filteredCategories.map((category) => (
           <div
+            key={category}
             className="category"
             data-selected={selectedCategory === category}
             onClick={() => handleSelect(category)}

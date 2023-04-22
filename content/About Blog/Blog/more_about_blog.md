@@ -6,8 +6,8 @@ category: "Blog"
 tags:
   - about
   - information
-background: "coding.gif"
-emoji: "🥛"
+background: "stickyNote.jpeg"
+emoji: "🐥"
 draft: false
 ---
 

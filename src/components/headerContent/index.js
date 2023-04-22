@@ -45,7 +45,12 @@ export const HeaderContent = ({
         <p className="headerTitle">{title}</p>
         <p className="headerSubTitle">{subtitle}</p>
         <div className="headerTags">
-          {tags && tags.map((tag) => <p className="headerTag"># {tag}</p>)}
+          {tags &&
+            tags.map((tag) => (
+              <p key={tag} className="headerTag">
+                #{tag}
+              </p>
+            ))}
         </div>
       </div>
     </div>

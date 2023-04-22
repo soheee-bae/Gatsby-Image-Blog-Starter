@@ -7,7 +7,7 @@ tags:
   - about
   - information
   - guidelines
-background: "coding.gif"
+background: "stickyNote.jpeg"
 emoji: "🚀"
 draft: false
 ---

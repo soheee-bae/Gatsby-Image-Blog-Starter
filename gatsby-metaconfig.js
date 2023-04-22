@@ -7,7 +7,7 @@ module.exports = {
   githubUrl: "https://github.com/soheee-bae",
   blogUrl: "https://soheee-bae.github.io/soheee-bae/",
 
-  homePageBackground: "night1.jpeg",
-  aboutPageBackground: "coding.gif",
-  postsPageBackground: "night.jpeg",
+  homePageBackground: "workspace_white.jpeg",
+  aboutPageBackground: "workspace_white.jpeg",
+  postsPageBackground: "workspace_white.jpeg",
 };
