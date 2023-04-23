@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-clean-blog-starter",
+  "name": "gatsby-image-blog-starter",
   "private": false,
-  "description": "Gatsby Clean Theme Blog starter",
+  "description": "Gatsby Image Theme Blog starter",
   "version": "0.1.0",
   "author": "SoHee Bae",
   "license": "0BSD",
@@ -47,10 +47,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sohee28/gatsby-clean-blog"
+    "url": "https://github.com/soheee-bae/Gatsby-Image-Blog-Starter"
   },
   "bugs": {
-    "url": "https://github.com/sohee28/gatsby-clean-blog/issues"
+    "url": "https://github.com/soheee-bae/Gatsby-Image-Blog-Starter/issues"
   },
   "devDependencies": {
     "eslint": "^8.33.0",
