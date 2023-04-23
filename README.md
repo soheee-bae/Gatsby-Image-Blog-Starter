@@ -43,7 +43,7 @@ gatsby new gatsby-image-blog-starter https://github.com/soheee-bae/Gatsby-Image-
 Navigate into your new site's directory and start it up.
 
 ```
-cd gatsby-clean-blog-starter/
+cd gatsby-image-blog-starter/
 gatsby develop
 ```
 
