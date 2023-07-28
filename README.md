@@ -2,6 +2,8 @@
 
 https://gatsbyimageblogstartermain.gatsbyjs.io/
 
+<br />
+
 Light Mode :
 
 <div>
