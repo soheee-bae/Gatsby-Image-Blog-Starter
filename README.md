@@ -1,6 +1,6 @@
 ## :eyes: Demo
 
-https://gatsbyimageblogstartermain.gatsbyjs.io/
+https://gatsby-image-blog-starter.netlify.app/
 
 <br />
 
